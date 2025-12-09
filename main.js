@@ -173,15 +173,52 @@ const PROJECTS = {
     sections: [
       {
         heading: '動機',
-        body: 'PCB 製造過程中的瑕疵檢測是品質控制關鍵環節，傳統人工檢測效率低且易出錯。本專案開發自動化影像分類系統，實現即時瑕疵檢測，提升生產線品質管理效率。'
+        body: `
+        印刷電路板（PCB）是各式電子產品中最關鍵的基板，只要板上元件裝配錯誤或焊接缺陷，就可能導致整機異常，因此生產過程中的缺陷檢測是品質管控的重要環節。[file:114] 傳統 AOI 結合人工覆判的檢測流程，不僅設備成本高、人工訓練時間長，且容易因光影變化與長時間作業導致誤判與過檢。本專題希望透過深度學習建置 PCB 影像分類模型，先自動判斷元件類型，作為後續瑕疵分類與 AI 覆判系統的基礎。
+        `
+
+
       },
       {
         heading: '方法流程',
-        body: '建立完整資料前處理流程（影像增強、資料增補、標準化）；設計多層 CNN 架構進行特徵提取與分類；採用 Dropout 與 Batch Normalization 避免過擬合；最後透過模型微調優化檢測性能。'
-      },
+          body: `
+          <!-- VAD 視覺化 -->
+          <div style="display:flex; gap:16px; margin:20px 0; flex-wrap:wrap;">
+            <div style="flex:1 1 260px;">
+              <img src="project/pcb/pcb_flow.jpg"
+                   alt="VAD 測試範例一"
+                   style="width:100%; height:auto; border-radius:8px; border:1px solid #e0e0e0;">
+            </div>
+            <div style="flex:1 1 260px;">
+              <img src="project/pcb/vgg19.jpg"
+                   alt="VAD 測試範例二"
+                   style="width:100%; height:auto; border-radius:8px; border:1px solid #e0e0e0;">
+            </div>
+          </div>
+        <p>本專題以 AOI 機台輸出的元件影像為輸入，先依元件類型整理並建立多類別資料集，包含缺件、翻件、短路等多種情境。[file:114] 影像經由尺寸標準化、對比度調整與資料增強後，輸入以 VGG19 為基底的卷積神經網路，利用遷移學習方式微調最後幾層全連接層，以適應 PCB 元件分類任務。[file:114] 為提升泛化能力，訓練過程搭配資料隨機打亂、學習率控制與早停策略，避免過擬合並穩定收斂。`
+},
       {
-        heading: '結果',
-        body: '在自建 PCB 瑕疵數據集上達到 94.2% 分類準確率，檢測速度達 120 FPS，顯著優於人工檢測效率。特別針對微小瑕疵（如刮痕、氣泡）展現優異辨識能力。'
+          heading: '結果',
+          body: `
+        <div style="text-align:center; margin-bottom:16px;">
+        <img src="project/pcb/result1.jpg"
+        alt="result1"
+        style="max-width:100%; border-radius:8px; border:1px solid #e0e0e0;">
+        <p style="text-align:center; font-size:12px; color:#888; margin-top:8px;">五次訓練曲線圖</p>
+      </div>
+
+        <p>在 PCB 元件分類實驗中，模型經過五次獨立訓練與測試，訓練準確率皆能穩定收斂至 100%，測試準確率則介於 99.62% 至 99.87% 之間，顯示模型在不同訓練次數下皆能維持高度且穩定的辨識能力。從訓練曲線可以看到，訓練與驗證準確率在早期 epoch 即快速上升並趨於重合，代表過程中沒有明顯過擬合，模型對未看過的測試影像仍具有良好的泛化表現。</p>
+
+        <div style="text-align:center; margin-bottom:16px;">
+        <img src="project/pcb/result2.jpg"
+        alt="result2"
+        style="max-width:100%; border-radius:8px; border:1px solid #e0e0e0;">
+        <p style="text-align:center; font-size:12px; color:#888; margin-top:8px;">結果表格</p>
+      </div>
+        <p>整體而言，此深度學習分類模型能有效區分不同類型的 PCB 元件，為後續導入實際 AOI 覆判流程、進一步進行瑕疵類型判斷奠定良好基礎。</p>
+
+          `
+      
       },
     ]
   },
