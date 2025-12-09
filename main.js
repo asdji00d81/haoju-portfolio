@@ -186,13 +186,17 @@ const PROJECTS = {
           <div style="display:flex; gap:16px; margin:20px 0; flex-wrap:wrap;">
             <div style="flex:1 1 260px;">
               <img src="project/PCB/pcb_flow.jpg"
-                   alt="VAD 測試範例一"
+                   alt="PCB"
                    style="width:100%; height:auto; border-radius:8px; border:1px solid #e0e0e0;">
+                  <p style="text-align:center; font-size:12px; color:#888; margin-top:8px;">流程圖</p>
+
             </div>
             <div style="flex:1 1 260px;">
               <img src="project/PCB/vgg19.jpg"
-                   alt="VAD 測試範例二"
+                   alt="PCB"
                    style="width:100%; height:auto; border-radius:8px; border:1px solid #e0e0e0;">
+                  <p style="text-align:center; font-size:12px; color:#888; margin-top:8px;">VGG19模型</p>
+
             </div>
           </div>
         <p>本專題以 AOI 機台輸出的元件影像為輸入，先依元件類型整理並建立多類別資料集，包含缺件、翻件、短路等多種情境。 影像經由尺寸標準化、對比度調整與資料增強後，輸入以 VGG19 為基底的卷積神經網路，利用遷移學習方式微調最後幾層全連接層，以適應 PCB 元件分類任務。 為提升泛化能力，訓練過程搭配資料隨機打亂、學習率控制與早停策略，避免過擬合並穩定收斂。`
