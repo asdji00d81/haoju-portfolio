@@ -185,12 +185,12 @@ const PROJECTS = {
           <!-- VAD 視覺化 -->
           <div style="display:flex; gap:16px; margin:20px 0; flex-wrap:wrap;">
             <div style="flex:1 1 260px;">
-              <img src="project/pcb/pcb_flow.jpg"
+              <img src="project/PCB/pcb_flow.jpg"
                    alt="VAD 測試範例一"
                    style="width:100%; height:auto; border-radius:8px; border:1px solid #e0e0e0;">
             </div>
             <div style="flex:1 1 260px;">
-              <img src="project/pcb/vgg19.jpg"
+              <img src="project/PCB/vgg19.jpg"
                    alt="VAD 測試範例二"
                    style="width:100%; height:auto; border-radius:8px; border:1px solid #e0e0e0;">
             </div>
@@ -201,7 +201,7 @@ const PROJECTS = {
           heading: '結果',
           body: `
         <div style="text-align:center; margin-bottom:16px;">
-        <img src="project/pcb/result1.jpg"
+        <img src="project/PCB/result1.jpg"
         alt="result1"
         style="max-width:100%; border-radius:8px; border:1px solid #e0e0e0;">
         <p style="text-align:center; font-size:12px; color:#888; margin-top:8px;">五次訓練曲線圖</p>
@@ -210,7 +210,7 @@ const PROJECTS = {
         <p>在 PCB 元件分類實驗中，模型經過五次獨立訓練與測試，訓練準確率皆能穩定收斂至 100%，測試準確率則介於 99.62% 至 99.87% 之間，顯示模型在不同訓練次數下皆能維持高度且穩定的辨識能力。從訓練曲線可以看到，訓練與驗證準確率在早期 epoch 即快速上升並趨於重合，代表過程中沒有明顯過擬合，模型對未看過的測試影像仍具有良好的泛化表現。</p>
 
         <div style="text-align:center; margin-bottom:16px;">
-        <img src="project/pcb/result2.jpg"
+        <img src="project/PCB/result2.jpg"
         alt="result2"
         style="max-width:100%; border-radius:8px; border:1px solid #e0e0e0;">
         <p style="text-align:center; font-size:12px; color:#888; margin-top:8px;">結果表格</p>
