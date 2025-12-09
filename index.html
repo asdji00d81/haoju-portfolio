@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Hao-Ju Hsieh | AI & ML Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 粒子背景 -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- 導覽列 -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="nav-brand">Hao-Ju Hsieh</div>
+      <div class="nav-links">
+        <a href="#about" data-target="about">關於我</a>
+        <a href="#experience" data-target="experience">學經歷</a>
+        <a href="#projects" data-target="projects">作品集</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 關於我 -->
+    <section id="about" class="page-section">
+      <div class="section-line"></div>
+      <div class="about-layout">
+        <div class="about-text">
+          <h1 class="about-title">About me</h1>
+          <h2 class="about-subtitle">謝昊儒 Hao‑Ju Hsieh</h2>
+          <p>國立臺灣海洋大學電機工程學系碩士(畢業)</p>
+          <p>
+            擅長 Python 與機器學習，具多種資料型態（影像、聲音等）實作經驗，熟悉深度學習模型設計與資料分析，期望投入 AI／演算法開發相關工作。
+          </p>
+
+          <h3 style="font-size:20px; margin:16px 0 8px;">Contact</h3>
+          <p style="margin:0;">
+            Email：<a href="mailto:asdji00d81@gmail.com">asdji00d81@gmail.com</a><br>
+            104：<a href="https://pda.104.com.tw/profile/share/jL5w6k7pGrc4GAEd7qt2HpXOhxmqiV6K" target="_blank">104.com/in/Hao-Ju</a><br>
+          </p>
+        </div>
+        <div class="about-photo-wrapper">
+          <img src="me.png" alt="Hao-Ju Hsieh portrait" class="about-photo">
+        </div>
+      </div>
+
+      <!-- 自傳 -->
+      <div style="margin-top:32px;">
+        <h2 style="font-size:20px; margin:0 0 12px;">自傳</h2>
+        <div style="font-size:14px; line-height:1.8;">
+          <p>【關於我】</p>
+          <p>我是謝昊儒，來自台南玉井，個性樂觀、踏實，遇到問題會先自己想辦法解決，也習慣在團隊中穩定完成分工。喜歡動手實作與學習新技術，做事細心、有耐心，能與不同背景的成員合作，一起完成專案目標。</p>
+          <p>【求學經歷】</p>
+          <p>大學前期成績表現普通，從大二開始為自己訂學習計畫，從基礎重新打好底子，專業成績與實作能力都有明顯提升。</p>
+          <p>在大學期間參加系學會並擔任迎新總召與美編，負責活動規劃、資源分配與對外溝通，培養在時間壓力下推進任務、協調團隊與處理突發狀況的能力。</p>
+          <p>參與校內 Library A-thon Python 程式設計與 Arduino 系統工程設計競賽，與團隊合作完成題目實作，我在團隊中主要負責資料整理與程式／系統除錯，最終獲得季軍與亞軍。</p>
+          <p>參與與日本芝浦工業大學合作的嵌入式系統課程，與日本學生共同討論與分工，在期末專題中負責感測邏輯、警示條件與系統整合，完成溫度感測警示裝置，累積跨文化協作經驗。</p>
+          <p>大學專題負責 PCB 瑕疵影像分類專案，從資料整理到模型訓練與調整；研究所則以水下聲音辨識為主題，實作從降噪、特徵設計到多種模型比較，最後設計出以 CNN‑LSTM + MobileNetV3 的架構，有效提升海洋哺乳類聲音辨識穩定度。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 學經歷 + Skills -->
+    <section id="experience" class="page-section">
+      <div class="section-line"></div>
+      <h2>學經歷</h2>
+        <div class="two-col">
+        <div class="card">
+          <div class="exp-item">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+              <img src="school/ntou_logo.jpg" alt="NTOU logo" style="height:80px; width:auto;">
+              <div>
+                <div class="exp-title">國立臺灣海洋大學 電機工程研究所</div>
+                <div class="exp-meta">2023 / 9 – 2025 / 7 · M.S. in Electrical Engineering</div>
+              </div>
+            </div>
+            <p style="margin:0;">
+              碩士論文：應用動態分割於水下音頻辨識，應用多特徵融合的 CNN + LSTM 進行水下聲音活動偵測與物種分類，提升在高噪聲海域下的辨識穩定性。
+            </p>
+          </div>
+
+          <div class="exp-item">
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
+              <img src="school/isu_logo.jpg" alt="ISU logo" style="height:80px; width:auto;">
+              <div>
+                <div class="exp-title">義守大學 智慧科技英語學士學位學程</div>
+                <div class="exp-meta">
+                  2019 / 9 – 2023 / 6 · B.S. in International Program on Artificial Intelligence Technology
+                </div>
+              </div>
+            </div>
+            <p style="margin:0;">
+              專題：深度學習 PCB 影像缺陷分類與檢測，建置前處理流程與 CNN 模型，提升瑕疵檢測準確率與實務可用性。
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="exp-title" style="margin-bottom:6px;">Skills</div>
+
+          <!-- 程式設計與資料處理 -->
+          <h3 style="font-size:14px; margin:8px 0 4px;">程式設計與資料處理</h3>
+
+          <div class="skills-list" style="margin-bottom:8px;">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+          </div>
+
+          <!-- 機器學習與深度學習 -->
+          <h3 style="font-size:14px; margin:8px 0 4px;">機器學習與深度學習</h3>
+
+          <div class="skills-list" style="margin-bottom:8px;">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Keras</span>
+            <span class="skill-tag">Scikit‑learn</span>
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">YOLO</span>
+          </div>
+
+          <!-- 版本控制與協作 -->
+          <h3 style="font-size:14px; margin:8px 0 4px;">版本控制與協作</h3>
+
+          <div class="skills-list">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 作品集：列表 + 詳細頁 -->
+    <section id="projects" class="page-section">
+      <div class="section-line"></div>
+      <h2>作品集</h2>
+
+      <!-- 列表 -->
+      <div class="proj-grid" id="project-list">
+        <!-- 作品 1：水下音頻 -->
+        <div class="proj-card" data-project="underwater">
+          <img src="project/vad.png" alt="Underwater audio project cover"
+               style="width:100%; border-radius:6px; margin-bottom:10px;">
+          <small>Thesis · Underwater Audio · 2023/9~2025/7</small>
+          <h3>應用動態分割於水下音頻辨識</h3>
+          <p>
+            針對水下聲音訊號進行事件分類，結合語音活動偵測與深度學習模型，協助自動監測水下環境狀態。
+          </p>
+        </div>
+
+        <!-- 作品 2：PCB -->
+        <div class="proj-card" data-project="pcb">
+          <img src="project/pcb.png" alt="PCB defect project cover"
+               style="width:100%; border-radius:6px; margin-bottom:10px;">
+          <small>Computer Vision · 2022/3~2023/3</small>
+          <h3>基於深度學習的 PCB 板分類應用</h3>
+          <p>
+            利用深度學習模型自動辨識與分類 PCB 板，降低人工檢測負擔與錯誤，提升生產線檢測效率。
+          </p>
+        </div>
+
+        <!-- 作品 3：紅綠燈偵測 -->
+        <div class="proj-card" data-project="traffic">
+          <img src="project/light.png" alt="Traffic light project cover"
+               style="width:100%; border-radius:6px; margin-bottom:10px;">
+          <small>Object Detection · 2022/3~2022/6</small>
+          <h3>紅綠燈檢測系統</h3>
+          <p>
+            建立 YOLOv5 影像偵測模型，用於道路場景中的紅綠燈與燈號辨識，作為智慧交通或自駕車輔助模組。
+          </p>
+        </div>
+
+        <!-- 作品 4：自走車 -->
+        <div class="proj-card" data-project="car">
+          <img src="project/car.png" alt="Arduino car cover"
+               style="width:100%; border-radius:6px; margin-bottom:10px;">
+          <small>Embedded System · 2021/10~2022/1</small>
+          <h3>Arduino 超音波避障自走車</h3>
+          <p>
+            使用 Arduino UNO、超音波感測器與伺服馬達製作四輪避障自走車，能旋轉感測周圍距離並自動判斷前進、轉彎或後退路徑。
+          </p>
+        </div>
+      </div>
+
+      <!-- 詳細內容區塊（初始隱藏） -->
+      <section id="project-detail">
+        <button id="project-detail-back" class="detail-back">
+          ← Back to Projects
+        </button>
+        <h2 id="detail-title" class="detail-title"></h2>
+        <div id="detail-meta" class="detail-meta"></div>
+        <img id="detail-image" src="" alt="Project detail image" class="detail-image">
+        <div id="detail-tech" class="detail-tech"></div>
+        <div id="detail-body" class="detail-body">
+          <!-- 內容由 JS 動態填入 -->
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Hao‑Ju Hsieh
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
